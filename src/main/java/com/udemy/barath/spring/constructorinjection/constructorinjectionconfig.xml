@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:p="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean class="com.udemy.barath.spring.constructorinjection.Address"
+		name="address">
+		<property name="houseNumber">
+			<value>123</value>
+		</property>
+		<property name="street">
+			<value>Main</value>
+		</property>
+		<property name="city">
+			<value>Denver</value>
+		</property>
+	</bean>
+	<bean class="com.udemy.barath.spring.constructorinjection.Employee"
+		name="employee">
+		<constructor-arg>
+			<value>123</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="address" />
+		</constructor-arg>
+	</bean>
+
+
+
+
+</beans>
