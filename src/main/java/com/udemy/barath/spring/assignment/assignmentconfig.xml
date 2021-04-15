@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean name="item" class="com.udemy.barath.spring.assignment.Item">
+
+		<property name="id" value="2000" />
+		<property name="name" value="Nintendo Switch" />
+		<property name="price" value="300.00" />
+		<property name="quantity" value="2" />
+	</bean>
+	<bean name="cart" class="com.udemy.barath.spring.assignment.ShoppingCart">
+
+		<property name="item">
+			<ref bean = "item" />
+		</property>
+
+	</bean>
+</beans>
