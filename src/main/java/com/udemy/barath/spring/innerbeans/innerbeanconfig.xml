@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<bean class="com.udemy.barath.spring.innerbeans.Employee"
+		name="employee">
+		<property name="id">
+			<value>123</value>
+		</property>
+		<property name="address">
+			<bean class="com.udemy.barath.spring.innerbeans.Address"> <!-- Nested bean -->
+				<property name="houseNumber">
+					<value>2222</value>
+				</property>
+				<property name="street">
+					<value>Main</value>
+				</property>
+				<property name="city">
+					<value>Denver</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+
+</beans>
