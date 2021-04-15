@@ -1,4 +1,4 @@
-package com.udemy.barath.spring.springcode;
+package com.udemy.barath.spring.springcore;
 
 public class Employee {
 
