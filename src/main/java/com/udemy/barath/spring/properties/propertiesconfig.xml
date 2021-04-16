@@ -7,25 +7,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://www.springframework.org/schema/beans">
 
-	<bean class="com.udemy.barath.spring.constructorinjection.Address"
-		name="address">
-		<property name="houseNumber">
-			<value>123</value>
-		</property>
-		<property name="street">
-			<value>Main</value>
-		</property>
-		<property name="city">
-			<value>Denver</value>
-		</property>
-	</bean>
-	<bean class="com.udemy.barath.spring.constructorinjection.Employee"
-		name="employee">
+	<context:property-placeholder location="com/udemy/barath/spring/properties/database.properties"/> 
+
+	<bean class="com.udemy.barath.spring.properties.MyDAO" name="MyDAO">
 		<constructor-arg>
-			<value>123</value>
-		</constructor-arg>
-		<constructor-arg>
-			<ref bean="address" />
+			<value>${dbServer}</value>
 		</constructor-arg>
 	</bean>
 
